@@ -1,0 +1,6 @@
+java \
+--module-path \
+/Users/fengliulin/IdeaProjects/JavaFxLearn/AddSdkRun/javafx-sdk-19/lib:/Users/fengliulin/IdeaProjects/JavaFxLearn/out/production/AddSdkRun \
+--add-modules \
+javafx.controls,javafx.fxml \
+-m cc.chengheng.AddSkdRun/cc.chengheng.HelloApplication

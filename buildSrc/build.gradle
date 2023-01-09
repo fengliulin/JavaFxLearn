@@ -1,0 +1,44 @@
+plugins {
+    id "idea"
+    id "groovy-gradle-plugin"
+    id "java-gradle-plugin"
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+//apply plugin: GreetingPlugin
+
+gradlePlugin {
+    plugins {
+        myFengliulin { // 自定义名字
+            id = "cc.chengheng.plugin"
+            implementationClass = "cc.chengheng.plugin.GreetingPlugin"
+        }
+    }
+}
+
+
+group = "org.example"
+version = "1.0-SNAPSHOT"
+
+
+repositories {
+    maven {
+        url("https://maven.aliyun.com/repository/public/")
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,78 @@
+plugins {
+    id "java-library"
+    id "idea"
+    id "maven-publish"
+}
+
+group = "cc.chengheng"
+version = "1.0"
+
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
+}
+
+afterEvaluate {
+    publishing {
+        // 发布到本地
+        publications {
+            plugin(MavenPublication) {
+                from components.java //使用默认的配置生成jar包
+            }
+        }
+    }
+}
+
+
+// <optional>true</optional>
+java {
+    registerFeature("optional") {
+        usingSourceSet(sourceSets.main)
+        withJavadocJar()
+        withSourcesJar()
+    }
+}
+
+
+java.sourceCompatibility = JavaVersion.VERSION_17
+java.targetCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    maven {
+        url("https://maven.aliyun.com/repository/public/")
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+
+dependencies {
+    // 日志门面
+    implementation("org.slf4j:slf4j-api:1.7.36")
+    testImplementation("org.slf4j:slf4j-api:1.7.36")
+
+    // 日志实现
+    implementation("ch.qos.logback:logback-classic:1.2.11")
+    testImplementation("ch.qos.logback:logback-classic:1.2.11")
+
+
+    // 测试依赖
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.1")
+
+    // lombok
+    compileOnly("org.projectlombok:lombok:1.18.24")
+    annotationProcessor("org.projectlombok:lombok:1.18.24")
+
+    // 测试包用lombok
+    testCompileOnly("org.projectlombok:lombok:1.18.24")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.24")
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.chengheng.HelloController">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@1024px-ISS-RapidScat_nadir_adapter_removed_from_CRS-4_Dragon_trunk_(ISS041E049097).jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="294.0" layoutY="84.0" text="Hello World" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Da 2 Regular" size="94.0" />
+               </font>
+            </Label>
+            <Label layoutX="373.0" layoutY="232.0" text="Java" textFill="#cda237">
+               <font>
+                  <Font size="59.0" />
+               </font></Label>
+            <Label layoutX="512.0" layoutY="238.0" text="Fx" textFill="#4a7ad3">
+               <font>
+                  <Font size="54.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="0.31" />
+               </effect>
+            </Label>
+            <Button layoutX="108.0" layoutY="178.0" mnemonicParsing="false" onAction="#myShapes_OnAction" text="MyShapes" />
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
