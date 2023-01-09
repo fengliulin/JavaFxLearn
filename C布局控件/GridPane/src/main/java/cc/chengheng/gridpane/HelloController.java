@@ -1,4 +1,4 @@
-package cc.chengheng.javafxlearn;
+package cc.chengheng.gridpane;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

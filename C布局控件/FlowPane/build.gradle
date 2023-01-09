@@ -8,8 +8,8 @@ plugins {
 
 
 application {
-    mainModule = 'cc.chengheng.javafxlearn'
-    mainClass = 'cc.chengheng.javafxlearn.HelloApplication'
+    mainModule = 'cc.chengheng.flowpane'
+    mainClass = 'cc.chengheng.flowpane.FlowPane'
 }
 
 javafx {
@@ -18,9 +18,7 @@ javafx {
 }
 
 
-test {
-    useJUnitPlatform()
-}
+
 
 jlink {
     imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip") as RegularFile
@@ -28,4 +26,9 @@ jlink {
     launcher {
         name = 'app'
     }
+}
+
+
+test {
+    useJUnitPlatform()
 }

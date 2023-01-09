@@ -1,4 +1,6 @@
 rootProject.name = "JavaFxLearn"
 include 'C布局控件:StackPane'
 include 'C布局控件:AnchorPane'
+include 'C布局控件:GridPane'
+include 'C布局控件:FlowPane'
 
