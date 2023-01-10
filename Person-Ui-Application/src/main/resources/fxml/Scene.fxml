@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.chengheng.FXMLController">
+   <children>
+      <SplitPane dividerPositions="0.30183946488294316" prefHeight="400.0" prefWidth="600.0">
+         <items>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="listView" prefHeight="400.0" prefWidth="200.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="400.0" prefWidth="391.0">
+                     <children>
+                        <Pane prefHeight="402.0" prefWidth="391.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="400.0" stroke="BLACK" strokeType="INSIDE" width="391.0">
+                                 <fill>
+                                    <LinearGradient endX="0.4441805225653207" endY="1.0" startX="0.3515439429928741" startY="0.28741092636579574">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.9372549057006836" green="0.9725490212440491" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.49559998512268066" green="0.7481600046157837" blue="0.8399999737739563" opacity="0.4225621521472931" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <StackPane prefHeight="293.0" prefWidth="391.0">
+                                 <children>
+                                    <GridPane fx:id="gridPane" alignment="CENTER" maxWidth="300.0" prefHeight="269.0" prefWidth="200.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints maxWidth="346.0" minWidth="10.0" prefWidth="45.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="255.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="160.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label text="First" />
+                                          <Label text="Last" GridPane.rowIndex="1" />
+                                          <Label text="Notes" GridPane.rowIndex="2" />
+                                          <TextField fx:id="firstnameTextField" maxWidth="200.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="lastnameTextField" maxWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextArea fx:id="notesTextArea" maxHeight="150.0" maxWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </StackPane>
+                              <ButtonBar layoutX="120.0" layoutY="337.0" prefHeight="40.0" prefWidth="200.0">
+                                <buttons>
+                                  <Button mnemonicParsing="false" text="New" />
+                                    <Button fx:id="modifiedProperty" mnemonicParsing="false" text="Update" />
+                                    <Button mnemonicParsing="false" text="Delete" />
+                                </buttons>
+                              </ButtonBar>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

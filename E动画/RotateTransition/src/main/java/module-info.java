@@ -3,6 +3,6 @@ module cc.chengheng.rotatetransition {
     requires javafx.fxml;
 
 
-    opens cc.chengheng.property to javafx.fxml;
-    exports cc.chengheng.property;
+    opens cc.chengheng to javafx.fxml;
+    exports cc.chengheng;
 }

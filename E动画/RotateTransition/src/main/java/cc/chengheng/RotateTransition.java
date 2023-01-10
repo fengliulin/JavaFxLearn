@@ -1,4 +1,4 @@
-package cc.chengheng.property;
+package cc.chengheng;
 
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;

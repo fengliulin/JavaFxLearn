@@ -1,4 +1,4 @@
-package cc.chengheng.property;
+package cc.chengheng;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

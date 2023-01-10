@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox stylesheets="../styles/Styles.css" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" spacing="50.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.chengheng.FXMLController">
+   <children>
+      <StackPane fx:id="stackPane" onMouseClicked="#stackPane_OnMouseClicked" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Ellipse radiusX="110.0" radiusY="70.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="0.5510688836104514" endY="1.0" startX="0.5653206650831354">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.19607843458652496" green="0.5882353186607361" blue="0.9254902005195618" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5">
+                           <color>
+                              <Color red="0.43921568989753723" green="0.6235294342041016" blue="0.7803921699523926" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5490196347236633" green="0.8784313797950745" blue="0.5882353186607361" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <effect>
+                  <DropShadow blurType="TWO_PASS_BOX" height="23.58" offsetX="5.0" offsetY="5.0" radius="8.3425" width="11.79">
+                     <color>
+                        <Color opacity="0.3537285029888153" />
+                     </color>
+                  </DropShadow>
+               </effect></Ellipse>
+            <Text strokeWidth="0.0" text="My Shapes">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+               <effect>
+                  <Reflection bottomOpacity="0.06" fraction="0.63" topOffset="1.0" topOpacity="0.51" />
+               </effect>
+            </Text>
+         </children>
+      </StackPane>
+      <Text styleClass="myText" fx:id="text2" strokeWidth="0.0" text="Animation Status:">
+         <font>
+            <Font name="Arial Black" size="18.0" />
+         </font></Text>
+   </children>
+</VBox>

@@ -1,4 +1,4 @@
-package cc.chengheng.property;
+package cc.chengheng;
 
 import javafx.animation.Animation;
 import javafx.animation.Interpolator;
@@ -43,11 +43,10 @@ public class Property extends Application {
         StackPane stackPane = new StackPane();
         stackPane.getChildren().addAll(ellipse, text);
 
-        VBox vBox = new VBox(30);
+        VBox vBox = new VBox();
         vBox.setAlignment(Pos.CENTER);
         vBox.getChildren().addAll(stackPane,text2);
-
-
+        vBox.setSpacing(30);
 
         Scene scene = new Scene(vBox, 350, 230, Color.LIGHTYELLOW);
 
