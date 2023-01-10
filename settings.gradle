@@ -4,4 +4,6 @@ include 'C布局控件:AnchorPane'
 include 'C布局控件:GridPane'
 include 'C布局控件:FlowPane'
 include 'C布局控件:TilePane'
+include 'C布局控件:BorderPane'
+include 'C布局控件:SplitPane'
 
