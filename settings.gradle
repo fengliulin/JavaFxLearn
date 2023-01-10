@@ -6,4 +6,7 @@ include 'C布局控件:FlowPane'
 include 'C布局控件:TilePane'
 include 'C布局控件:BorderPane'
 include 'C布局控件:SplitPane'
+include 'LinearGradient'
+include 'Feffect:DropShadow投影'
+include 'Feffect:Reflection倒影'
 
