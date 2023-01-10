@@ -9,4 +9,6 @@ include 'C布局控件:SplitPane'
 include 'LinearGradient'
 include 'Feffect:DropShadow投影'
 include 'Feffect:Reflection倒影'
+include 'E动画:RotateTransition'
+include 'Property-Binding'
 
