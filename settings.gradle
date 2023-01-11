@@ -13,4 +13,5 @@ include 'E动画:RotateTransition'
 include 'Property-Binding-JavaFXBeans'
 include 'Fxml'
 include 'Person-Ui-Application'
+include 'D控件:CheckBox'
 
