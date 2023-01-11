@@ -7,8 +7,10 @@
  ******************************************/
 package cc.chengheng.model;
 
+import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.util.Callback;
 
 import java.util.Objects;
 
@@ -21,6 +23,16 @@ public class Person {
 
     private StringProperty notes =
             new SimpleStringProperty(this, "notes", "");
+
+    public static Callback<Person, Observable[]> extractor = new Callback<Person, Observable[]>() {
+        @Override
+        public Observable[] call(Person param) {
+            return new Observable[]{
+                    param.lastnameProperty(),
+                    param.firstnameProperty()
+            };
+        }
+    };
 
     public Person() {
     }
