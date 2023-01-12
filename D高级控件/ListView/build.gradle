@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id "common.groovy-conventions"
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.beryx.jlink' version '2.25.0'
+}
+
+//application {
+//    mainModule = 'cc.chengheng.rotatetransition'
+//    mainClass = 'cc.chengheng.rotatetransition.RotateTransition'
+//}
+
+javafx {
+    version = '19'
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+
+
+
+jlink {
+    imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip") as RegularFile
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+    launcher {
+        name = 'app'
+    }
+}
+
+
+test {
+    useJUnitPlatform()
+}

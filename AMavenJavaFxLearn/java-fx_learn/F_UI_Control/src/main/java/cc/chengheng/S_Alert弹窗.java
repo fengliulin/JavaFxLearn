@@ -42,8 +42,9 @@ public class S_Alert弹窗 extends Application {
 
 //                alert.getDialogPane().getButtonTypes().remove();
 
-                alert.show();
+//                alert.show();
 
+                alert.showAndWait();
 
                 bu.setOnAction(event1 -> {
                     System.out.println("ok");

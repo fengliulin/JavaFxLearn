@@ -20,5 +20,7 @@ include 'D控件:RadioButton'
 include 'D菜单:MenuBar-Menu-MenuItem-SplitMenuButton-MenuButton'
 include 'D菜单:ContextMenu'
 include 'D菜单:ChoiceBox'
+include 'D高级控件:ListView'
+include 'D高级控件:ComboBox'
 
 
