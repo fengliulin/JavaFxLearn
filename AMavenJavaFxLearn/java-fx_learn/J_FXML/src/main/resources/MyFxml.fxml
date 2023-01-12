@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<!--new AnchorPane-->
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="Scss.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.chengheng.controller.MyController">
+
+    <children> <!--AnchorPane.getChildren-->
+        <Label fx:id="fxmlLabel" layoutX="309.0" layoutY="59.0" text="这是一个标签" />
+        <Button fx:id="fxmlButton" layoutX="409.0" layoutY="9.0" onAction="#action" prefHeight="117.0" prefWidth="108.0" style="-fx-background-radius: 1" text="文本">
+           <style>
+               -fx-background-color: #a2cd5a
+           </style>
+            <!-- 给button设置距离 -->
+            <AnchorPane.leftAnchor>409.0</AnchorPane.leftAnchor>
+        </Button>
+        <ImageView fitHeight="156.0" fitWidth="258.0" layoutX="320.0" layoutY="191.0">
+            <Image url="@alert.png" />
+        </ImageView>
+        <BorderPane layoutX="40.0" layoutY="126.0" prefHeight="245.0" prefWidth="236.0" style="-fx-background-color: #ffff55">
+            <left>
+                <ListView fx:id="listView" prefHeight="245.0" prefWidth="89.0">
+                    <items>
+<!--                         给list view设置值-->
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="data1" />
+                        </FXCollections>
+                    </items>
+                </ListView>
+            </left>
+         <right>
+                <ComboBox BorderPane.alignment="CENTER">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="data1" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+         </right>
+        </BorderPane>
+
+    </children>
+</AnchorPane>

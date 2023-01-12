@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>javaFX_learn</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>A_lifecycle_stage_platform_screen</module>
+        <module>B_scene</module>
+        <module>C_Group_Button_dblclick_KeyboardKeys</module>
+        <module>D_TextField_PasswordField_Label</module>
+        <module>E_layout</module>
+        <module>F_UI_Control</module>
+        <module>G_bound</module>
+        <module>H_image</module>
+        <module>I-event</module>
+        <module>J_FXML</module>
+        <module>ResourceBundle</module>
+        <module>K_Transform</module>
+        <module>java截图功能</module>
+        <module>L_chart</module>
+        <module>M_Web</module>
+        <module>N_Paint绘画</module>
+        <module>O_Effect</module>
+        <module>P_2D_Shape</module>
+        <module>Q_Canvas</module>
+        <module>R_3D_Graphics</module>
+        <module>S_Animation</module>
+        <module>T_Media</module>
+        <module>U_JavaFx加载Swing</module>
+        <module>V_Clipboard系统剪贴板</module>
+        <module>W_JavaFx_concurrent_Worker</module>
+        <module>Z_other</module>
+        <module>X_ListView_TableView_TreeView_TreeTableView</module>
+    </modules>
+
+    <name>javaFX_learn</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>5.8.1</junit.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>17.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
+            </plugin>
+            <!--<plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <executions>
+                    <execution>
+                        &lt;!&ndash; Default configuration for running with: mvn clean javafx:run &ndash;&gt;
+&lt;!&ndash;                        <id>default-cli</id>&ndash;&gt;
+                        <configuration>
+                            <stripDebug>true</stripDebug>
+                            <compress>2</compress>
+                            <noHeaderFiles>true</noHeaderFiles>
+                            <noManPages>true</noManPages>
+                            <launcher>JavaFXSample</launcher>
+                            <jlinkImageName>build-link</jlinkImageName>
+                            <jlinkZipName>sample-zip</jlinkZipName>
+                            <mainClass>cc.chengheng.A_Clipboard</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
+
+
+
+
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.example.javafx_learn.A列表_树表格_多列列表.A_ListView.A_ListView_鼠标事件和单元格简单的拖动事件</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assembly</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

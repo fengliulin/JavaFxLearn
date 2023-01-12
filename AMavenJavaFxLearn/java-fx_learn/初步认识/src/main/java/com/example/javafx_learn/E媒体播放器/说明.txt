@@ -1,0 +1,8 @@
+JavaFX自带媒体播放的支持，可以在应用中加入播放功能
+视频：MP4 (h264/aac), HLV(vp6/mp3)
+音频：WAV, MP3, AIFF
+协议：FILE, HTTP, HLS
+
+Media: 表示一个媒体文件（URL）
+MediaPlayer: 表示一个播放器（播放控件）
+MediaView： 表示一个播放控件（显示）

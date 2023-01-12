@@ -1,0 +1,7 @@
+无论是容器还是控件，都是继承于Node
+    JavaFX里有几种Node：
+        容器，如BorderPane, HBox
+        控件，如Button, Label
+        形状，如Circle, Rectangle ( Text 也是形状）
+        图表，如PieChart, XYChart
+        其他，如Canvas, ImageView, MediaView, WebView

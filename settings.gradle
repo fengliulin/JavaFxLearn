@@ -14,4 +14,11 @@ include 'Property-Binding-JavaFXBeans'
 include 'Fxml'
 include 'Person-Ui-Application'
 include 'D控件:CheckBox'
+include 'D控件:HyperLink'
+include 'D控件:ToggleButton'
+include 'D控件:RadioButton'
+include 'D菜单:MenuBar-Menu-MenuItem-SplitMenuButton-MenuButton'
+include 'D菜单:ContextMenu'
+include 'D菜单:ChoiceBox'
+
 

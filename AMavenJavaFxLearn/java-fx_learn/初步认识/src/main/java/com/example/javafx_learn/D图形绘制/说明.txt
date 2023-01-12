@@ -1,0 +1,14 @@
+图形绘制
+JavaFX里支持
+    2D绘制
+    3D绘制
+    文字特效
+    图表绘制
+    时间线动画
+
+坐标是以左上角 x0， y0 开始
+相对坐标
+    在JavaFX API下里，一个点有3组相对坐标
+        X, Y   节点自己的
+        SceneX, SceneY
+        ScreenX, ScreenY

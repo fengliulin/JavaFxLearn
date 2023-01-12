@@ -1,0 +1,107 @@
+package cc.chengheng;
+
+import javafx.animation.Animation;
+import javafx.animation.Interpolator;
+import javafx.animation.PathTransition;
+import javafx.animation.StrokeTransition;
+import javafx.application.Application;
+import javafx.scene.DepthTest;
+import javafx.scene.PerspectiveCamera;
+import javafx.scene.Scene;
+import javafx.scene.SceneAntialiasing;
+import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.*;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+
+public class H_PathTransition路径动画 extends Application {
+    public static void main(String[] args) {
+        launch();
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+
+        HBox hBox = new HBox(30);
+
+        Path path = new Path();
+        MoveTo mt = new MoveTo(0, 0); // 从哪开始移动
+
+        // 线
+        LineTo lt = new LineTo(100, 0);
+
+        // 二次贝塞尔
+        QuadCurveTo qc = new QuadCurveTo(100, 0, 100, 100);
+        qc.setAbsolute(false); // 修改相对坐标
+
+        // 水平线
+        HLineTo ht = new HLineTo(100);
+        ht.setAbsolute(false);
+
+        // 三次贝塞尔
+        CubicCurveTo cc = new CubicCurveTo(50, -50, 150, 50, 200, 0);
+        cc.setAbsolute(false);
+
+        // 垂直线
+        VLineTo vt = new VLineTo(100);
+        vt.setAbsolute(false);
+
+        // 绘制弧长
+        ArcTo ac = new ArcTo(100, 100, 0, 100, 100, true, true);
+        ac.setAbsolute(false);
+
+        ClosePath closePath = new ClosePath();
+
+//        path.setFill(Color.BLUE);
+
+
+        path.getElements().addAll(mt, lt, qc, ht, cc, vt, ac, closePath);
+
+
+        Button bu = new Button("Button");
+
+        Rectangle rec = new Rectangle(100, 100, Color.RED);
+        // 设置中心坐标
+        rec.setX(-50);
+        rec.setY(-50);
+
+        // 路径动画
+        PathTransition pt = new PathTransition();
+        pt.setNode(rec);
+        pt.setPath(path);
+        pt.setDuration(Duration.seconds(6));
+
+        pt.play();
+
+        //======================================================================
+
+        AnchorPane root = new AnchorPane();
+        root.getChildren().addAll(hBox, bu, rec, path);
+
+        root.setDepthTest(DepthTest.ENABLE);
+
+        AnchorPane.setLeftAnchor(path, 100.0);
+        AnchorPane.setTopAnchor(path, 100.0);
+
+        AnchorPane.setLeftAnchor(rec, 100.0);
+        AnchorPane.setTopAnchor(rec, 100.0);
+        root.setStyle("-fx-background-color: #eeeeee00"); // 需要设置透明度
+
+
+        // true启用3d渲染       SceneAntialiasing.BALANCED启用抗锯齿优化以平衡质量和性能
+        Scene scene = new Scene(root, 1000, 1000, true, SceneAntialiasing.BALANCED);
+
+        // 启动透视相机
+        scene.setCamera(new PerspectiveCamera());
+
+
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("javaFx");
+        primaryStage.setHeight(1000);
+        primaryStage.setWidth(1000);
+        primaryStage.show();
+    }
+}

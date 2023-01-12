@@ -1,0 +1,3 @@
+Shape.subtract()   减去
+Shape.intersect()  交集
+Shape.union()      并集

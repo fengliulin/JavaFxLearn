@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.chengheng.RadioButtonFXMLController">
+   <children>
+      <RadioButton layoutX="163.0" layoutY="116.0" mnemonicParsing="false" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="feng" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="163.0" layoutY="151.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$feng" />
+      <TextField layoutX="128.0" layoutY="236.0" />
+      <ProgressBar layoutX="88.0" layoutY="55.0" prefWidth="200.0" progress="0.48" />
+      <ProgressIndicator centerShape="false" layoutX="349.0" layoutY="148.0" maxHeight="40.0" maxWidth="40.0" prefHeight="67.0" prefWidth="113.0" progress="0.32">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </ProgressIndicator>
+      <Slider fx:id="slider" layoutX="138.0" layoutY="207.0" value="30.0" />
+   </children>
+</AnchorPane>
