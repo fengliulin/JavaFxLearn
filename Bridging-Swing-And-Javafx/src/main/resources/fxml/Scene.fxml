@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cc.chengheng.BridgingSwingAndJavafxFXMLController">
+   <children>
+      <ChoiceBox fx:id="choiceBox" layoutX="81.0" layoutY="154.0" prefWidth="150.0" />
+      <ComboBox layoutX="286.0" layoutY="71.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

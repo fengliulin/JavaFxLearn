@@ -1,0 +1,22 @@
+.root {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+}
+
+/* 不是根据变量名，是根据 类 */
+.label {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+.big-bold-text {
+    -fx-font-weight: bold;
+    -fx-font-size: 20pt;
+}
+
+#big-bold-text1 {
+    -fx-font-weight: bold;
+    -fx-font-size: 20pt;
+}
+
