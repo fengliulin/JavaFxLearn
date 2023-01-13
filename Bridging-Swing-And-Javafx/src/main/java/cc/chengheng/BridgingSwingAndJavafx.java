@@ -12,6 +12,10 @@ import java.net.URL;
 public class BridgingSwingAndJavafx extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+
+
+
+
         URL resource = BridgingSwingAndJavafx.class.getResource("/fxml/Scene.fxml");
         assert resource != null;
         AnchorPane root = FXMLLoader.load(resource);

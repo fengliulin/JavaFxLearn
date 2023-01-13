@@ -24,5 +24,6 @@ include 'D高级控件:ListView'
 include 'D高级控件:ComboBox'
 include 'CSS-Design'
 include 'Bridging-Swing-And-Javafx'
+include 'JavaFxWeb-javasxript'
 
 
