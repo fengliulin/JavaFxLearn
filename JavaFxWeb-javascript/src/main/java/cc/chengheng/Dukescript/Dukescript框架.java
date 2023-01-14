@@ -27,7 +27,6 @@ public class Dukescript框架 extends Application {
 
 
         Scene scene = new Scene(tabPane);
-        scene.getStylesheets().add("/styles/Styles.css");
         stage.setTitle("JavaFX and DukeScript");
         stage.setScene(scene);
         stage.show();

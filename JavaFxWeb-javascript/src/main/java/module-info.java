@@ -1,4 +1,4 @@
-module cc.chengheng.Property {
+module cc.chengheng.fengliulin {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -9,5 +9,6 @@ module cc.chengheng.Property {
     opens cc.chengheng to javafx.fxml;
     exports cc.chengheng;
     exports cc.chengheng.Dukescript;
+    
     opens cc.chengheng.Dukescript to javafx.fxml;
 }
