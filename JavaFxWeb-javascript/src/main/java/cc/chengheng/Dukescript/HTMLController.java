@@ -21,6 +21,9 @@ public class HTMLController implements FXBeanInfo.Provider {
             .property(labelText)
             .build();
 
+    public HTMLController() {
+    }
+
     @Override
     public FXBeanInfo getFXBeanInfo() {
         return info;

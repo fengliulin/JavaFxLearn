@@ -3,7 +3,9 @@ module cc.chengheng.fengliulin {
     requires javafx.fxml;
     requires javafx.web;
     requires jdk.jsobject;
-    requires javafx.beaninfo;
+    requires static javafx.beaninfo;
+    requires static net.java.html.boot.fx;
+    requires static net.java.html.json;
 
 
     opens cc.chengheng to javafx.fxml;

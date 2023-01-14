@@ -1,10 +1,13 @@
+package cc.chengheng;
+
+
 
 import cc.chengheng.Dukescript.HTMLController;
 import com.dukescript.api.javafx.beans.ActionDataEvent;
 import com.dukescript.api.javafx.beans.FXBeanInfo;
 import javafx.beans.value.ObservableValue;
 import javafx.event.EventHandler;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

@@ -1,3 +1,16 @@
+pluginManagement {
+    repositories {
+        maven {
+            url "https://nexus.gluonhq.com/nexus/content/repositories/releases"
+        }
+        gradlePluginPortal()
+    }
+}
+
+
+
+
+
 rootProject.name = "JavaFxLearn"
 include 'C布局控件:StackPane'
 include 'C布局控件:AnchorPane'
@@ -25,5 +38,6 @@ include 'D高级控件:ComboBox'
 include 'CSS-Design'
 include 'Bridging-Swing-And-Javafx'
 include 'JavaFxWeb-javascript'
+include 'native-mobile'
 
 
